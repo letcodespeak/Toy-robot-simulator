@@ -1,13 +1,13 @@
 package com.rea.interview.robot;
 
-import com.rea.interview.robot.core.command.process.CarMovementCommandProcessor;
+import com.rea.interview.robot.core.command.process.RobotMovementCommandProcessor;
 import com.rea.interview.robot.core.command.process.CommandProcessor;
 import com.rea.interview.robot.core.input.InputHandler;
 import com.rea.interview.robot.util.PropertiesUtil;
 
 public class FeedMain {
 
-    private CommandProcessor processor = new CarMovementCommandProcessor();
+    private CommandProcessor processor = new RobotMovementCommandProcessor();
 
     public FeedMain() {
         super();

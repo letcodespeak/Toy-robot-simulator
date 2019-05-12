@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.rea.interview.robot.core.CarLocation;
+import com.rea.interview.robot.core.RobotLocation;
 
 
 public class MoveCommandTest {
@@ -15,29 +15,29 @@ public class MoveCommandTest {
         @Test
         public void testSuccessfulMove() {
         		
-        	CarLocation.getInstance().setX(0);
-        	CarLocation.getInstance().setY(0);
-        	CarLocation.getInstance().setDirection("NORTH");
+        	RobotLocation.getInstance().setX(0);
+        	RobotLocation.getInstance().setY(0);
+        	RobotLocation.getInstance().setDirection("NORTH");
         		
                 String[] commands = new String[]{"MOVE"};
         	moveCommand.execute(commands);
-        	assertEquals(0,CarLocation.getInstance().getX());
-        	assertEquals(1,CarLocation.getInstance().getY());
-        	assertEquals("NORTH",CarLocation.getInstance().getDirection());
+        	assertEquals(0,RobotLocation.getInstance().getX());
+        	assertEquals(1,RobotLocation.getInstance().getY());
+        	assertEquals("NORTH",RobotLocation.getInstance().getDirection());
         }
         	
         @Test
         public void testFailedMove() {
         	
-        	CarLocation.getInstance().setX(0);
-        	CarLocation.getInstance().setY(0);
-        	CarLocation.getInstance().setDirection("WEST");
+        	RobotLocation.getInstance().setX(0);
+        	RobotLocation.getInstance().setY(0);
+        	RobotLocation.getInstance().setDirection("WEST");
         	
                 String[] commands = new String[]{"MOVE"};
         	moveCommand.execute(commands);
-        	assertEquals(0,CarLocation.getInstance().getX());
-        	assertEquals(0,CarLocation.getInstance().getY());
-        	assertEquals("WEST",CarLocation.getInstance().getDirection());
+        	assertEquals(0,RobotLocation.getInstance().getX());
+        	assertEquals(0,RobotLocation.getInstance().getY());
+        	assertEquals("WEST",RobotLocation.getInstance().getDirection());
         }
 
 }

@@ -1,6 +1,6 @@
 package com.rea.interview.robot.core.command;
 
-import com.rea.interview.robot.core.CarLocation;
+import com.rea.interview.robot.core.RobotLocation;
 
 public class TurnLeftCommand implements Command {
 
@@ -10,14 +10,14 @@ public class TurnLeftCommand implements Command {
 
     @Override
     public void execute(String[] commands) {
-        if (CarLocation.getInstance().getDirection().equalsIgnoreCase("NORTH")) {
-            CarLocation.getInstance().setDirection("WEST");
-        } else if (CarLocation.getInstance().getDirection().equalsIgnoreCase("SOUTH")) {
-            CarLocation.getInstance().setDirection("EAST");
-        } else if (CarLocation.getInstance().getDirection().equalsIgnoreCase("EAST")) {
-            CarLocation.getInstance().setDirection("NORTH");
-        } else if (CarLocation.getInstance().getDirection().equalsIgnoreCase("WEST")) {
-            CarLocation.getInstance().setDirection("SOUTH");
+        if (RobotLocation.getInstance().getDirection().equalsIgnoreCase("NORTH")) {
+            RobotLocation.getInstance().setDirection("WEST");
+        } else if (RobotLocation.getInstance().getDirection().equalsIgnoreCase("SOUTH")) {
+            RobotLocation.getInstance().setDirection("EAST");
+        } else if (RobotLocation.getInstance().getDirection().equalsIgnoreCase("EAST")) {
+            RobotLocation.getInstance().setDirection("NORTH");
+        } else if (RobotLocation.getInstance().getDirection().equalsIgnoreCase("WEST")) {
+            RobotLocation.getInstance().setDirection("SOUTH");
         }
 
     }

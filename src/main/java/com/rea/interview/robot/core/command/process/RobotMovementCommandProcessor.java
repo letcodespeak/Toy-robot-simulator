@@ -7,11 +7,11 @@ import com.rea.interview.robot.core.command.Command;
 import com.rea.interview.robot.core.command.CommandFactory;
 import com.rea.interview.robot.util.CommandUtil;
 
-public class CarMovementCommandProcessor implements CommandProcessor {
+public class RobotMovementCommandProcessor implements CommandProcessor {
 
     private CommandValidationStrategy validator;
 
-    public CarMovementCommandProcessor() {
+    public RobotMovementCommandProcessor() {
         super();
     }
 

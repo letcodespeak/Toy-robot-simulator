@@ -19,7 +19,7 @@ public class CommandUtil {
 
     public static void printInitCommandTips() {
 
-        System.out.println("The car movement must to be initialized by following command first ");
+        System.out.println("The robot movement must to be initialized by following command first ");
         System.out.println("  PLACE <X>,<Y>,<F>");
 
     }

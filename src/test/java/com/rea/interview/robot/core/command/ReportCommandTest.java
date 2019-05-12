@@ -9,7 +9,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.rea.interview.robot.core.CarLocation;
+import com.rea.interview.robot.core.RobotLocation;
 
 public class ReportCommandTest {
 
@@ -32,9 +32,9 @@ public class ReportCommandTest {
 
     @Test
     public void testExecute() {
-        CarLocation.getInstance().setX(0);
-        CarLocation.getInstance().setY(0);
-        CarLocation.getInstance().setDirection("EAST");
+        RobotLocation.getInstance().setX(0);
+        RobotLocation.getInstance().setY(0);
+        RobotLocation.getInstance().setDirection("EAST");
 
         String[] commands = new String[] { "REPORT" };
         reportCommand.execute(commands);

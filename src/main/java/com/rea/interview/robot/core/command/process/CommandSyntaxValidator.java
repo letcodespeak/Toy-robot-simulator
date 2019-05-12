@@ -1,6 +1,6 @@
 package com.rea.interview.robot.core.command.process;
 
-import com.rea.interview.robot.core.CarLocation;
+import com.rea.interview.robot.core.RobotLocation;
 import com.rea.interview.robot.util.IConstant;
 import com.rea.interview.robot.util.PropertiesUtil;
 
@@ -59,7 +59,7 @@ public class CommandSyntaxValidator implements CommandValidationStrategy {
 
             } else {
 
-                if (!CarLocation.getInstance()
+                if (!RobotLocation.getInstance()
                     .isInitialized()) { // not initialized yet. Run init first.
                     // CommandUtil.printInitCommandTips();
                     result = -2;

@@ -1,6 +1,6 @@
 package com.rea.interview.robot.core.command;
 
-import com.rea.interview.robot.core.CarLocation;
+import com.rea.interview.robot.core.RobotLocation;
 
 public class ReportCommand implements Command {
 
@@ -11,7 +11,7 @@ public class ReportCommand implements Command {
     @Override
     public void execute(String[] commands) {
 
-        CarLocation cl = CarLocation.getInstance();
+        RobotLocation cl = RobotLocation.getInstance();
 
         System.out.println(String.format("Output: %d,%d,%s", cl.getX(), cl.getY(), cl.getDirection()));
 

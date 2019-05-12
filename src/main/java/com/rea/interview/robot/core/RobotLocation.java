@@ -1,22 +1,22 @@
 package com.rea.interview.robot.core;
 
-public class CarLocation {
+public class RobotLocation {
 
     private int x;
     private int y;
     private String direction;
 
-    private CarLocation() {
+    private RobotLocation() {
         x = -1;
         y = -1;
         direction = "N/A";
     }
 
     private static interface Singleton {
-        final CarLocation INSTANCE = new CarLocation();
+        final RobotLocation INSTANCE = new RobotLocation();
     }
 
-    public static CarLocation getInstance() {
+    public static RobotLocation getInstance() {
         return Singleton.INSTANCE;
     }
 

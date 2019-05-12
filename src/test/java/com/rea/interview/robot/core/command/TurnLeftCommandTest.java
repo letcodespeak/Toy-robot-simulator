@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.rea.interview.robot.core.CarLocation;
+import com.rea.interview.robot.core.RobotLocation;
 
 
 public class TurnLeftCommandTest {
@@ -17,15 +17,15 @@ public class TurnLeftCommandTest {
 	@Test
 	public void testSuccessfulTurnLeft() {
 		
-	    CarLocation.getInstance().setX(0);
-	    CarLocation.getInstance().setY(0);
-	    CarLocation.getInstance().setDirection("NORTH");
+	    RobotLocation.getInstance().setX(0);
+	    RobotLocation.getInstance().setY(0);
+	    RobotLocation.getInstance().setDirection("NORTH");
 		
             String[] commands = new String[]{"LEFT"};
             turnLeftCommand.execute(commands);
-            assertEquals(0,CarLocation.getInstance().getX());
-            assertEquals(0,CarLocation.getInstance().getY());
-            assertEquals("WEST",CarLocation.getInstance().getDirection());
+            assertEquals(0,RobotLocation.getInstance().getX());
+            assertEquals(0,RobotLocation.getInstance().getY());
+            assertEquals("WEST",RobotLocation.getInstance().getDirection());
 	}
 	
 

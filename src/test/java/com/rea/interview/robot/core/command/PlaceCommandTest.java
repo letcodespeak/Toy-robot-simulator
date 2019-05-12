@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.rea.interview.robot.core.CarLocation;
+import com.rea.interview.robot.core.RobotLocation;
 
 public class PlaceCommandTest {
 
@@ -13,26 +13,26 @@ public class PlaceCommandTest {
 	@Test
 	public void testSuccessfulInit() {
 		
-		CarLocation.getInstance().setX(0);
-		CarLocation.getInstance().setY(0);
-		CarLocation.getInstance().setDirection("NORTH");
+		RobotLocation.getInstance().setX(0);
+		RobotLocation.getInstance().setY(0);
+		RobotLocation.getInstance().setDirection("NORTH");
 		
                 String[] commands = new String[]{"PLACE","0","1","EAST"};
                 placeCommand.execute(commands);
-		assertEquals(0,CarLocation.getInstance().getX());
-		assertEquals(1,CarLocation.getInstance().getY());
-		assertEquals("EAST",CarLocation.getInstance().getDirection());
+		assertEquals(0,RobotLocation.getInstance().getX());
+		assertEquals(1,RobotLocation.getInstance().getY());
+		assertEquals("EAST",RobotLocation.getInstance().getDirection());
 	}
 	
 	@Test
 	public void testFailedInit() {
 		
-		CarLocation.getInstance().reset();
+		RobotLocation.getInstance().reset();
 		String[] commands = new String[]{"PLACE","0","-1","EAST"};
 		placeCommand.execute(commands);
-		assertEquals(-1,CarLocation.getInstance().getX());
-		assertEquals(-1,CarLocation.getInstance().getY());
-		assertEquals("N/A",CarLocation.getInstance().getDirection());
+		assertEquals(-1,RobotLocation.getInstance().getX());
+		assertEquals(-1,RobotLocation.getInstance().getY());
+		assertEquals("N/A",RobotLocation.getInstance().getDirection());
 	}
 
 }
